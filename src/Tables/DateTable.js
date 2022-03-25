@@ -14,6 +14,7 @@ export default function DateTable(props) {
     }
   }, [data]);
 
+  // Save only the needed data in "data" State
   function getData() {
     let dataArr = [];
     props.data.map((activity) => {
@@ -25,6 +26,7 @@ export default function DateTable(props) {
     setData(dataArr);
   }
 
+  // Aggregate the "data" save in State
   const aggregateArray = (arr) => {
     return arr.reduce((acc, val) => {
       const index = acc.findIndex((obj) => obj.date === val.date);

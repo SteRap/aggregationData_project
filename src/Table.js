@@ -21,7 +21,7 @@ function Table(props) {
     toogleEmployee(ownState, setOwnState);
     tableEmployee ? setProjectFirst(false) : setProjectFirst(true);
   };
-  const toogleData = (ownState, setOwnState) => {
+  const toogleDate = (ownState, setOwnState) => {
     setOwnState(!ownState);
     setTableProject(tableProject && false);
     setTableEmployee(tableEmployee && false);
@@ -55,7 +55,7 @@ function Table(props) {
             name={"Date"}
             ownState={tableDate}
             onClick={() => {
-              toogleData(tableDate, setTableDate);
+              toogleDate(tableDate, setTableDate);
             }}
           />
         </div>
